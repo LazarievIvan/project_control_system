@@ -1,11 +1,8 @@
-# Модель прецедентів
-** **
+# Розробка вимог до функціональності системи
 
-
-
+## Ділові процеси
 
 ### Загальна схема
-** **
 
 <center style="
     border-radius:4px;
@@ -101,7 +98,6 @@ end footer
 
 
 ### Teamlead
-** **
 
 <center style="
     border-radius:4px;
