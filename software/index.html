@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Реалізація інформаційного та програмного забезпечення | Система управління проектами</title>
+    <meta name="generator" content="VuePress 1.9.5">
+    <link rel="icon" href="/project_control_system/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="description" content="Лабораторні роботи з дисципліни &quot;Організація баз даних&quot;">
+    
+    <link rel="preload" href="/project_control_system/assets/css/0.styles.f7015215.css" as="style"><link rel="preload" href="/project_control_system/assets/js/app.2ecc18d1.js" as="script"><link rel="preload" href="/project_control_system/assets/js/2.7eb26c5b.js" as="script"><link rel="preload" href="/project_control_system/assets/js/23.ae62a73f.js" as="script"><link rel="prefetch" href="/project_control_system/assets/js/10.59ff8adf.js"><link rel="prefetch" href="/project_control_system/assets/js/11.bc31628e.js"><link rel="prefetch" href="/project_control_system/assets/js/12.a11c4e76.js"><link rel="prefetch" href="/project_control_system/assets/js/13.f6eafe83.js"><link rel="prefetch" href="/project_control_system/assets/js/14.9676336f.js"><link rel="prefetch" href="/project_control_system/assets/js/15.53563db3.js"><link rel="prefetch" href="/project_control_system/assets/js/16.73013da2.js"><link rel="prefetch" href="/project_control_system/assets/js/17.49c3600a.js"><link rel="prefetch" href="/project_control_system/assets/js/18.6c77e3ec.js"><link rel="prefetch" href="/project_control_system/assets/js/19.e56422e5.js"><link rel="prefetch" href="/project_control_system/assets/js/20.03b7d084.js"><link rel="prefetch" href="/project_control_system/assets/js/21.72d96b97.js"><link rel="prefetch" href="/project_control_system/assets/js/22.5ea28898.js"><link rel="prefetch" href="/project_control_system/assets/js/24.f7494321.js"><link rel="prefetch" href="/project_control_system/assets/js/25.11c12197.js"><link rel="prefetch" href="/project_control_system/assets/js/26.6dec4e79.js"><link rel="prefetch" href="/project_control_system/assets/js/3.60814b08.js"><link rel="prefetch" href="/project_control_system/assets/js/4.bc84dd2c.js"><link rel="prefetch" href="/project_control_system/assets/js/5.84bc6417.js"><link rel="prefetch" href="/project_control_system/assets/js/6.1747596f.js"><link rel="prefetch" href="/project_control_system/assets/js/7.77942256.js"><link rel="prefetch" href="/project_control_system/assets/js/8.58f2573d.js"><link rel="prefetch" href="/project_control_system/assets/js/9.3ada139a.js">
+    <link rel="stylesheet" href="/project_control_system/assets/css/0.styles.f7015215.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/project_control_system/" class="home-link router-link-active"><!----> <span class="site-name">Система управління проектами</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/project_control_system/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/LazarievIvan/project_control_system" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/project_control_system/" class="nav-link">
+  Початок
+</a></div> <a href="https://github.com/LazarievIvan/project_control_system" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/project_control_system/intro/" class="sidebar-link">Вступ</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/project_control_system/requirements/" class="sidebar-heading clickable"><span>Розроблення загальних вимог до системи</span> <span class="arrow right"></span></a> <!----></section></li><li><a href="/project_control_system/use%20cases/" class="sidebar-link">Розроблення вимог до функціональности системи</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/project_control_system/use%20cases/#ділові-процеси" class="sidebar-link">Ділові процеси</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/project_control_system/use%20cases/#загальна-схема" class="sidebar-link">Загальна схема</a></li><li class="sidebar-sub-header"><a href="/project_control_system/use%20cases/#teamlead" class="sidebar-link">Teamlead</a></li><li class="sidebar-sub-header"><a href="/project_control_system/use%20cases/#project-manager" class="sidebar-link">Project Manager</a></li><li class="sidebar-sub-header"><a href="/project_control_system/use%20cases/#developer" class="sidebar-link">Developer</a></li></ul></li><li class="sidebar-sub-header"><a href="/project_control_system/use%20cases/#сценаріі" class="sidebar-link">Сценарії</a></li></ul></li><li><a href="/project_control_system/design/" class="sidebar-link">Проектування інформаційного забезпечення</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/project_control_system/design/#модель-бізнес-об-єктів" class="sidebar-link">Модель бізнес-об'єктів</a></li><li class="sidebar-sub-header"><a href="/project_control_system/design/#er-модель" class="sidebar-link">ER-модель</a></li><li class="sidebar-sub-header"><a href="/project_control_system/design/#реляціина-схема" class="sidebar-link">Реляційна схема</a></li></ul></li><li><a href="/project_control_system/software/" aria-current="page" class="active sidebar-link">Реалізація інформаційного та програмного забезпечення</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/project_control_system/software/#sql-скрипт-для-створення-на-початкового-наповнення-бази-даних" class="sidebar-link">SQL-скрипт для створення на початкового наповнення бази даних</a></li></ul></li><li><a href="/project_control_system/test/" class="sidebar-link">Тестування працездатності системи</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/project_control_system/test/#засоби-тестування" class="sidebar-link">Засоби тестування</a></li><li class="sidebar-sub-header"><a href="/project_control_system/test/#ремарка" class="sidebar-link">Ремарка</a></li><li class="sidebar-sub-header"><a href="/project_control_system/test/#скріншоти-виконання" class="sidebar-link">Скріншоти виконання</a></li></ul></li><li><a href="/project_control_system/conclusion/" class="sidebar-link">Висновки</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="реалізація-інформаціиного-та-програмного-забезпечення"><a href="#реалізація-інформаціиного-та-програмного-забезпечення" class="header-anchor">#</a> Реалізація інформаційного та програмного забезпечення</h1> <p>В рамках проекту розробляється:</p> <ul><li>SQL-скрипт для створення на початкового наповнення бази даних</li> <li>RESTfull сервіс для управління даними</li></ul> <h2 id="sql-скрипт-для-створення-на-початкового-наповнення-бази-даних"><a href="#sql-скрипт-для-створення-на-початкового-наповнення-бази-даних" class="header-anchor">#</a> SQL-скрипт для створення на початкового наповнення бази даних</h2> <h4 id="sql-скрипт-для-створення-бази-даних"><a href="#sql-скрипт-для-створення-бази-даних" class="header-anchor">#</a> SQL-скрипт для створення бази даних</h4> <div class="language- extra-class"><pre class="language-text"><code>-- -----------------------------------------------------
+-- Schema ProjectControlSystem
+-- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `ProjectControlSystem` ;
+CREATE SCHEMA IF NOT EXISTS `ProjectControlSystem` DEFAULT CHARACTER SET utf8;
+USE `ProjectControlSystem` ;
+-- -----------------------------------------------------
+-- Table `ProjectControlSystem`.`projects`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ProjectControlSystem`.`projects` ;
+CREATE TABLE IF NOT EXISTS `ProjectControlSystem`.`projects` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(45) NULL,
+`description` VARCHAR(255) NULL,
+PRIMARY KEY (`id`),
+UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `ProjectControlSystem`.`users`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ProjectControlSystem`.`users`;
+CREATE TABLE IF NOT EXISTS `ProjectControlSystem`.`users` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`email` VARCHAR(255) NOT NULL,
+`password` VARCHAR(255) NULL,
+`name` VARCHAR(100) NULL,
+PRIMARY KEY(`id`),
+UNIQUE INDEX `id_UNIQUE` (`id` ASC))
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `ProjectControlSystem`.`roles`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ProjectControlSystem`.`roles`;
+CREATE TABLE IF NOT EXISTS `ProjectControlSystem`.`roles` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`project_id` INT NOT NULL,
+`user_id` INT NOT NULL,
+`role` ENUM(&quot;Project Manager&quot;, &quot;Teamlead&quot;, &quot;Developer&quot;),
+PRIMARY KEY(`id`),
+UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+CONSTRAINT `c_role_project`
+FOREIGN KEY (`project_id`)
+REFERENCES `ProjectControlSystem`.`projects` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION,
+CONSTRAINT `c_role_users`
+FOREIGN KEY (`user_id`)
+REFERENCES `ProjectControlSystem`.`users` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `ProjectControlSystem`.`tasks`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ProjectControlSystem`.`tasks`;
+CREATE TABLE IF NOT EXISTS `ProjectControlSystem`.`tasks` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`project_id` INT NOT NULL,
+`user_id` INT NULL,
+`name` VARCHAR(100) NULL,
+`description` VARCHAR(255) NULL,
+`deadline` DATETIME NULL,
+`dependence` INT NOT NULL,
+`status` ENUM(&quot;TO DO&quot;, &quot;IN PROGRESS&quot;, &quot;RESOLVED&quot;, &quot;DONE&quot;) NULL,
+PRIMARY KEY (`id`, `dependence`),
+UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+CONSTRAINT `c_tasks_projects`
+FOREIGN KEY (`project_id`)
+REFERENCES `ProjectControlSystem`.`projects` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION,
+CONSTRAINT `c_tasks_dependency`
+FOREIGN KEY (`dependence`)
+REFERENCES `ProjectControlSystem`.`tasks` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION,
+CONSTRAINT `c_tasks_user`
+FOREIGN KEY (`user_id`)
+REFERENCES `ProjectControlSystem`.`users` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `ProjectControlSystem`.`actions`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ProjectControlSystem`.`actions`;
+CREATE TABLE IF NOT EXISTS `ProjectControlSystem`.`actions` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`task_id` INT NOT NULL,
+`user_id` INT NOT NULL,
+`acted_at` DATETIME NULL,
+`previous_status` ENUM(&quot;TO DO&quot;, &quot;IN PROGRESS&quot;, &quot;RESOLVED&quot;, &quot;DONE&quot;) NULL,
+`current_status` ENUM(&quot;TO DO&quot;, &quot;IN PROGRESS&quot;, &quot;RESOLVED&quot;, &quot;DONE&quot;, &quot;DELETED&quot;) NULL,
+PRIMARY KEY (`id`),
+UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+CONSTRAINT `c_actions_tasks`
+FOREIGN KEY (`task_id`)
+REFERENCES `ProjectControlSystem`.`tasks` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION,
+CONSTRAINT `c_actions_users`
+FOREIGN KEY(`user_id`)
+REFERENCES `ProjectControlSystem`.`users` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+-- -----------------------------------------------------
+-- Table `ProjectControlSystem`.`artifacts`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ProjectControlSystem`.`artifacts`;
+CREATE TABLE IF NOT EXISTS `ProjectControlSystem`.`artifacts` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(100) NOT NULL NULL,
+`description` VARCHAR(255) NULL,
+`link` VARCHAR(255) NULL,
+`project_id` INT NOT NULL,
+PRIMARY KEY (`id`),
+UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+CONSTRAINT `c_artifacts_project`
+FOREIGN KEY (`project_id`)
+REFERENCES `ProjectControlSystem`.`projects` (`id`)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+</code></pre></div><h4 id="sql-скрипт-для-початкового-наповнення-бази-даних"><a href="#sql-скрипт-для-початкового-наповнення-бази-даних" class="header-anchor">#</a> SQL-скрипт для початкового наповнення бази даних</h4> <div class="language- extra-class"><pre class="language-text"><code>-- SET key checks to 0 to truncate all tables
+SET FOREIGN_KEY_CHECKS = 0;
+-- -----------------------------------------------
+-- Creating users --------------------------------
+-- -----------------------------------------------
+TRUNCATE users;
+INSERT INTO users (email, password, name)
+VALUES 
+('boldak@example.mail', MD5('qwerty12345'), 'Andriy Boldak'),
+('lazariev@example.mail', MD5('admin'), 'Lazariev Ivan'),
+('kobilinskiy@example.mail', MD5('fyodOR'), 'Kobilinskiy Fedir'),
+('naumchuk@example.mail', MD5('sany0k'), 'Naumchuk Oleksandr'),
+('sadlovskiy@example.mail', MD5('password'), 'Sadlovskiy Anton'),
+('kurta_semen@example.mail', MD5('s3m3nKurt4'), 'Kurta Semen'),
+('radkovskiy@example.mail', MD5('YuriY'), 'Radkovskiy Yuriy'),
+('bondarenko@example.mail', MD5('bond4r3nk0'), 'Bondarenko Serhiy'),
+('pupkin@example.mail', MD5('pupk1n'), 'Pupkin Vladimyr'),
+('shevchenko@example.mail', MD5('k0bz4r'), 'Shevchenko Taras');
+-- --------------------------------------------------
+-- Creating projects --------------------------------
+-- --------------------------------------------------
+TRUNCATE projects;
+INSERT INTO projects (name, description)
+VALUES
+('Database project', 'Simple database learning project'),
+('Github clone', 'Project for our own github clone');
+-- ----------------------------------------------------------------------
+-- Creating data for roles table --------------------------------
+-- ----------------------------------------------------------------------
+TRUNCATE roles;
+INSERT INTO roles (project_id, user_id, role) 
+VALUES (1, 1, 'Project Manager'), (1, 2, 'Teamlead'), (1, 3, 'Developer'),
+(2, 3, 'Teamlead'), (2, 2, 'Project Manager');
+INSERT INTO roles (project_id, user_id, role) 
+SELECT 2, id, 'Developer' FROM users WHERE name LIKE '%e%';
+-- ----------------------------------------------------
+-- Creating some tasks --------------------------------
+-- ----------------------------------------------------
+TRUNCATE tasks;
+INSERT INTO tasks (project_id, user_id, name, description, deadline, dependence, status)
+VALUES
+(1, (SELECT r.user_id FROM roles as r WHERE r.project_id = 1 AND r.user_id = 2),
+	'Create database', 'Create SQL database', STR_TO_DATE('30-June-2022', '%d-%M-%Y'), 1, 'TO DO'),
+(1, (SELECT r.user_id FROM roles as r WHERE r.project_id = 1 AND r.user_id = 4),
+	'Create `users` schema', 'Create one of the SQL schemas', STR_TO_DATE('30-July-2022', '%d-%M-%Y'), 1, 'TO DO'),
+(2, (SELECT r.user_id FROM roles as r WHERE r.project_id = 2 AND r.user_id = 4),
+	'Research', 'Research github', STR_TO_DATE('30-June-2022', '%d-%M-%Y'), 3, 'IN PROGRESS');
+-- --------------------------------------------------------
+-- Creating some artifacts --------------------------------
+-- --------------------------------------------------------
+TRUNCATE artifacts;
+INSERT INTO artifacts (name, description, link, project_id)
+VALUES
+(
+	'Github repo',
+    'Github repo for project',
+    'github.com/user/repo', 
+	(SELECT id FROM projects WHERE projects.id = 1)
+),
+(
+	'Design document',
+    'Design Document for project',
+    'drive.com/ourproject/design-doc.pdf',
+    (SELECT id FROM projects WHERE projects.id = 1)
+);
+-- --------------------------------------------------------
+-- Creating some actions ----------------------------------
+-- --------------------------------------------------------
+TRUNCATE actions;
+INSERT INTO actions (task_id, user_id, acted_at, previous_status, current_status)
+VALUES
+(
+	(SELECT id FROM tasks WHERE tasks.id = 3),
+    # Get user id from corresponding task from particular project.
+    (SELECT roles.user_id FROM roles
+	INNER JOIN tasks ON tasks.project_id = roles.project_id
+	INNER JOIN users ON users.id = roles.user_id
+	WHERE tasks.id = 3 AND users.id = 4),
+	STR_TO_DATE('30-May-2022', '%d-%M-%Y'),
+    'TO DO',
+    (SELECT status FROM tasks WHERE tasks.id = 3)
+);
+-- SET key cheks back to 1
+SET FOREIGN_KEY_CHECKS = 1;
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Останнє оновлення:</span> <span class="time">6/12/2022, 3:31:41 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/project_control_system/design/" class="prev">
+        Проектування інформаційного забезпечення
+      </a></span> <span class="next"><a href="/project_control_system/test/">
+        Тестування працездатності системи
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/project_control_system/assets/js/app.2ecc18d1.js" defer></script><script src="/project_control_system/assets/js/2.7eb26c5b.js" defer></script><script src="/project_control_system/assets/js/23.ae62a73f.js" defer></script>
+  </body>
+</html>
